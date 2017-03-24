@@ -1,0 +1,3 @@
+{
+  "test_image.py::test_pip_packages[docker://test_container]": true
+}
