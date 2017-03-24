@@ -5,4 +5,6 @@ MAINTAINER Angelo Veltens <angelo.veltens@online.de>
 RUN apk add --no-cache docker python py-pip
 RUN pip install docker && pip install testinfra
 
-CMD sh
+WORKDIR /project
+
+CMD testinfra -v --connection docker
