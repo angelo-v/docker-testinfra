@@ -7,4 +7,4 @@ RUN pip install docker && pip install testinfra
 
 WORKDIR /project
 
-CMD testinfra -v --connection docker
+CMD pytest --verbose

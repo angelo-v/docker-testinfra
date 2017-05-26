@@ -1,7 +1,7 @@
 import docker
 import pytest
 
-testinfra_hosts = ['test_container']
+testinfra_hosts = ['docker://test_container']
 
 @pytest.fixture(scope="module", autouse=True)
 def container(client, image):
@@ -15,10 +15,10 @@ def container(client, image):
     yield container
     container.remove(force=True)
 
-def test_pip_packages(PipPackage):
-    packages = PipPackage.get_packages()
+def test_pip_packages(host):
+    packages = host.pip_package.get_packages()
     assert "docker" in packages
     assert "testinfra" in packages
 
-def test_docker_executable(Command):
-    assert Command.exists("docker")
+def test_docker_executable(host):
+    assert host.exists("docker")

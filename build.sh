@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t=aveltens/docker-testinfra ./src
+docker build --pull -t=aveltens/docker-testinfra ./src
