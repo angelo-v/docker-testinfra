@@ -6,7 +6,7 @@ docker-testinfra is a docker image, that helps testing other docker images via [
 
     docker run --rm -t \
       -v /path/to/your-docker-project:/project \
-      -v /var/run/docker.sock:/var/run/docker.sock \
+      -v /var/run/docker.sock:/var/run/docker.sock:ro \
       aveltens/docker-testinfra
 
 # Examples
