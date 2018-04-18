@@ -2,6 +2,8 @@
 
 docker-testinfra is a docker image, that helps testing other docker images via [testinfra](https://testinfra.readthedocs.io/).
 
+[![Dockerhub badge](http://dockeri.co/image/aveltens/docker-testinfra)](https://hub.docker.com/r/aveltens/docker-testinfra)
+
 # Quickstart
 
     docker run --rm -t \
