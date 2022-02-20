@@ -18,7 +18,7 @@ def container(client, image):
 def test_pip_packages(host):
     packages = host.pip_package.get_packages()
     assert "docker" in packages
-    assert "testinfra" in packages
+    assert "pytest-testinfra" in packages
 
 def test_docker_executable(host):
     assert host.exists("docker")
